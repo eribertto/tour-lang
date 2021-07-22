@@ -2,7 +2,7 @@
 // from book The Complete Rust Programming Ref Guide
 
 // import syntax with use keyword for library module std
-use std::{env, u64};
+use std::env;
 fn main() {
     let name = env::args().skip(1).next();
     match name {
@@ -20,14 +20,24 @@ fn main() {
     greeting = "How are you doing";
     println!("{}, {}", greeting, target);
 
-	// call the function outside this main
+	// call the add function outside this main
 	let num1: u64 = 17;
 	let num2 = 3;
 	let result = add(num1, num2);
 	println!("{} + {} = {}", num1, num2, result);
 
+	// call second function
+	let score = 2048;
+	increase_by(score, 32);
+
 }
-// calling function
+// create addition function
 fn add(a: u64, b: u64) -> u64 {
     a + b // no need for return keyword
+}
+
+// function that modify its arguments
+fn increase_by(mut val: u32, how_much: u32) {
+	val += how_much;
+	println!("You made {} points", val);
 }
