@@ -30,7 +30,25 @@ fn main() {
 	let score = 2048;
 	increase_by(score, 32);
 
+	// introducing closure e.g. like a function but has more info
+	// of the environment or scope in which it is declared
+	// unlike functions, closures are defined without a func name
+	let doubler = |x| x * 2;
+	let value = 5;
+	let twice = doubler(value);
+	println!("{} doubled is {}", value, twice);
+
+	// storing a closure in a variable
+	let big_closure = |b: i32, c| {
+		let z = b + c;
+		z * twice
+	};		// note the closing semicolon
+
+	let some_number = big_closure(10, 20);
+	println!("Result from big closure: {}", some_number);
 }
+
+
 // create addition function
 fn add(a: u64, b: u64) -> u64 {
     a + b // no need for return keyword
