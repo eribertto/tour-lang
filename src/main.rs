@@ -3,6 +3,8 @@
 
 // import syntax with use keyword for library module std
 use std::env;
+mod functions;		// import from functions.rs
+
 fn main() {
     let name = env::args().skip(1).next();
     match name {
@@ -23,12 +25,12 @@ fn main() {
 	// call the add function outside this main
 	let num1: u64 = 17;
 	let num2 = 3;
-	let result = add(num1, num2);
+	let result = functions::add(num1, num2);
 	println!("{} + {} = {}", num1, num2, result);
 
 	// call second function
 	let score = 2048;
-	increase_by(score, 32);
+	functions::increase_by(score, 32);
 
 	// introducing closure e.g. like a function but has more info
 	// of the environment or scope in which it is declared
@@ -59,13 +61,4 @@ fn main() {
 }
 
 
-// create addition function
-fn add(a: u64, b: u64) -> u64 {
-    a + b // no need for return keyword
-}
 
-// function that modify its arguments
-fn increase_by(mut val: u32, how_much: u32) {
-	val += how_much;
-	println!("You made {} points", val);
-}
