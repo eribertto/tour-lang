@@ -3,6 +3,8 @@
 
 // import syntax with use keyword for library module std
 use std::env;
+
+use crate::functions::myconditionals;
 mod functions;		// import from functions.rs
 
 fn main() {
@@ -58,6 +60,10 @@ fn main() {
 	let person: String = "Bob".to_string();
 	let namaste = String::from("नमते");	// unicodes!
 	println!("{}! {} {}", namaste, question, person);
+
+
+	// call conditionals in functions.rs
+	myconditionals();
 }
 
 
