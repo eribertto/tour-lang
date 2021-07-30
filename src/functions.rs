@@ -22,4 +22,12 @@ pub fn myconditionals() {
 	} else {
 		println!("Well, you should try Rust!");
 	}
+
+	// assigning conditional result to a variable
+	let result = if 1 == 2 {
+		"Wait, what???!!!"
+	} else {
+		"Rust is smart to figure out equality"
+	};		// note this semicolon is needed for the let statement above
+	println!("You know what? {}.", result);
 }
