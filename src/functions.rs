@@ -18,7 +18,7 @@ pub fn increase_by(mut val: u32, how_much: u32) {
 pub fn myconditionals() {
 	let rust_is_awesome = true;
 	if rust_is_awesome {
-		println!("Indeed!");
+		println!("Indeed, Rust is awesome!");
 	} else {
 		println!("Well, you should try Rust!");
 	}
