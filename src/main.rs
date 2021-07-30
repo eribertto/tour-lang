@@ -46,6 +46,16 @@ fn main() {
 
 	let some_number = big_closure(10, 20);
 	println!("Result from big closure: {}", some_number);
+
+	// all about strings, in Rust there are 2 types: the &str
+	// and the String type
+	// note: String types are allocated on the heap while & are
+	// usually pointers to an existing string, which can either be
+	// on the stack, the heap or a string in the data segment of compiled code.
+	let question = "How are you?";	// & is an operator used to create a pointer to any type
+	let person: String = "Bob".to_string();
+	let namaste = String::from("नमते");	// unicodes!
+	println!("{}! {} {}", namaste, question, person);
 }
 
 
