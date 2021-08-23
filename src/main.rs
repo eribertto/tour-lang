@@ -64,6 +64,21 @@ fn main() {
 
 	// call conditionals in functions.rs
 	myconditionals();
+
+	// about match expression
+	fn req_status() -> u32 {
+		// return 200
+		200
+	}
+	let status = req_status();
+	match status {
+		200 => println!("Success, found 200!"),
+		404 => println!("NOt found!"),
+		other => {
+			println!("Request failed with code: {}", other);
+			// get response from cache
+		}
+	}
 }
 
 
