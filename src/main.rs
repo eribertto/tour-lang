@@ -82,11 +82,11 @@ fn main() {
 
 	// all about loops
 	let mut x = 1024;
+	println!("All about for loops!");
 	loop {
 		if x < 0 {
 			break;
 		}
-		println!("All about for loops!")
 		println!("{} more runs to go", x);
 		x -= 128; 	//decrement using the operator -=
 	}
