@@ -24,7 +24,7 @@ fn main() {
     greeting = "How are you doing";
     println!("{}, {}", greeting, target);
 
-	// call the add function outside this main
+	// call the add function from the mod function.rs
 	let num1: u64 = 17;
 	let num2 = 3;
 	let result = functions::add(num1, num2);
@@ -33,6 +33,9 @@ fn main() {
 	// call second function
 	let score = 2048;
 	functions::increase_by(score, 32);
+
+	// call conditionals in functions.rs
+	myconditionals();
 
 	// introducing closure e.g. like a function but has more info
 	// of the environment or scope in which it is declared
@@ -62,8 +65,6 @@ fn main() {
 	println!("{}! {} {}", namaste, question, person);
 
 
-	// call conditionals in functions.rs
-	myconditionals();
 
 	// about match expression
 	fn req_status() -> u32 {
