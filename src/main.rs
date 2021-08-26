@@ -79,6 +79,16 @@ fn main() {
 			// get response from cache
 		}
 	}
+
+	// all about loops
+	let mut x = 1024;
+	loop {
+		if x < 0 {
+			break;
+		}
+		println!("{} more runs to go", x);
+		x -= 1; 	//decrement by one each loop
+	}
 }
 
 
