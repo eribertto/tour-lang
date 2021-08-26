@@ -72,7 +72,7 @@ fn main() {
 	}
 	let status = req_status();
 	match status {
-		200 => println!("Success, found 200!"),
+		200 => println!("Success, match status found 200!"),
 		404 => println!("NOt found!"),
 		other => {
 			println!("Request failed with code: {}", other);
