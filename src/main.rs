@@ -86,8 +86,9 @@ fn main() {
 		if x < 0 {
 			break;
 		}
+		println!("All about for loops!")
 		println!("{} more runs to go", x);
-		x -= 1; 	//decrement by one each loop
+		x -= 128; 	//decrement using the operator -=
 	}
 }
 
